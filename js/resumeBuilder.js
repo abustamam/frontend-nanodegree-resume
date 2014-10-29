@@ -1,83 +1,4 @@
-// var bio = {
-//   "name": "Rasheed Bustamam",
-//   "role": "Front-End Web Developer",
-//   "contacts": {
-//     "phone": "916-623-5146",
-//     "email": "rasheed.bustamam@gmail.com",
-//     "github": "abustamam",
-//     'blog': "abustamam.github.io",
-//     'location': 'Sacramento, CA'
-//   },
-//   "welcome message": "Hi!",
-//   "skills": ["awesomeness", "programming", "teaching", "JS"],
-//   "img": "images/me.jpg"
-// };
-
-// var work = {}
-
-// work.position = "Assistant Instructor";
-// work.employer = "Davis Kumon Center";
-// work.years = "2013 - present";
-// work.city = "Davis, CA";
-// work.desc = "At Kumon, our goal is to help students learn for the long run. This is done by encouraging students to teach themselves complex mathematical concepts via example."
-
-// var education = {
-//   "name": "UC Davis",
-//   "years": "2008 - 2013",
-//   "city": "Davis, CA",
-//   "major": "Chemical Engineering"
-// }
-
-// var formattedName = HTMLheaderName.replace("%data%",bio["name"]);
-// var formattedRole = HTMLheaderRole.replace("%data%",bio["role"]);
-// var formattedMobile = HTMLmobile.replace("%data%",bio["contacts"]["phone"]);
-// var formattedEmail = HTMLemail.replace("%data%",bio["contacts"]["email"]);
-// var formattedGithub = HTMLgithub.replace("%data%",bio["contacts"]["github"]);
-// var formattedBlog = HTMLblog.replace("%data%",bio["contacts"]['blog']);
-// var formattedLocation = HTMLlocation.replace("%data%",bio["contacts"]['location']);
-// var formattedPic = HTMLbioPic.replace("%data%",bio['img']);
-// var formattedWelcome = HTMLWelcomeMsg.replace("%data%",bio['welcome message']);
-// var formattedSkills = HTMLskills.replace("%data%",bio['skills']);
-
-// var formattedEmployer = HTMLworkEmployer.replace("%data%",work["employer"]);
-// var formattedTitle = HTMLworkTitle.replace("%data%",work["position"]);
-// var formattedDates = HTMLworkDates.replace("%data%",work["years"]);
-// var formattedLocation = HTMLworkLocation.replace("%data%",work['city']);
-// var formattedWorkDesc = HTMLworkDescription.replace("%data%",work['desc']);
-
-// var formattedSchoolName = HTMLschoolName.replace("%data%",education.name);
-// // HTMLschoolDegree
-// var formattedSchoolDates = HTMLschoolDates.replace("%data%",education.years);
-// var formattedSchoolCity = HTMLschoolLocation.replace("%data%",education.city);
-// var formattedSchoolMajor = HTMLschoolMajor.replace("%data%",education.major);
-
-// $("#header").prepend(formattedRole);
-// $("#header").prepend(formattedName);
-
-// $("#topContacts").append(formattedMobile);
-// $("#topContacts").append(formattedEmail);
-// $("#topContacts").append(formattedLocation);
-// $("#topContacts").append(formattedGithub);
-// $("#topContacts").append(formattedBlog);
-
-// $("#header").append(formattedPic);
-// $("#header").append(formattedWelcome);
-
-// $("#skillsChart").append(HTMLskillsStart);
-// $("#skills").append(formattedSkills);
-
-// $("#workExperience").append(HTMLworkStart);
-// $(".work-entry").append(formattedEmployer);
-// $(".work-entry").append(formattedTitle);
-// $(".work-entry").append(formattedDates);
-// $(".work-entry").append(formattedLocation);
-// $(".work-entry").append(formattedWorkDesc);
-
-// $("#education").append(HTMLschoolStart);
-// $(".education-entry").append(formattedSchoolName);
-// $(".education-entry").append(formattedSchoolDates);
-// $(".education-entry").append(formattedSchoolCity);
-// $(".education-entry").append(formattedSchoolMajor);
+// JSON
 
 var work = {
   "jobs": [
@@ -124,7 +45,12 @@ var projects = {
 var bio = {
   "name": "Rasheed Bustamam",
   "role": "Front-End Web Developer",
-  "welcomeMessage": "My name is Rasheed Bustamam. I'm cool.",
+  "welcomeMessage": "My name is Rasheed Bustamam. I'm a passionate learner, trying to learn new things every day. My current endeavor is programming, \
+                    and I am currently learning how to create websites such as this through Udacity's Nanodegree program. I love teaching, and I believe that \
+                    our nation's future belongs with our youth. <br><br>\
+                    I currently serve as the president of a public speaking organization consisting of over 30 enthusiastic people, eager to defeat their fear of \
+                    public speaking. I have overseen a youth leadership program, which was an 8 week program designed to help children ages 7-17 create and deliver \
+                    a speech, as well as run a business meeting according to Robert's Rules.",
   "contacts": {
     "mobile": "916-623-5146",
     "email": "rasheed.bustamam@gmail.com",
@@ -132,7 +58,7 @@ var bio = {
     "location": "Sacramento, CA"
   },
   "img": "images/me.jpg",
-  "skills": ["awesomeness", "programming", "teaching", "JS"]
+  "skills": ["public speaking", "programming", "teaching", "JavaScript"]
 };
 
 var education = {
@@ -188,8 +114,7 @@ bio.display = function() {
 
   // Display contact info
 
-  $("#header").prepend(formattedRole);
-  $("#header").prepend(formattedName);
+  $("#header").prepend(formattedName + formattedRole);
   var contacts = bio["contacts"];
   var formattedMobile = HTMLmobile.replace("%data%",contacts["mobile"]);
   var formattedEmail = HTMLemail.replace("%data%",contacts["email"]);
@@ -197,8 +122,6 @@ bio.display = function() {
   var formattedLocation = HTMLlocation.replace("%data%",contacts["location"]);
   var cont = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
   $(cont).appendTo("#topContacts, #footerContacts");
-  // $("#topContacts").append(formattedMobile + formattedEmail + formattedGithub + formattedLocation);
-  // $("#footerContacts").append(formattedMobile + formattedEmail + formattedGithub + formattedLocation);
   
   // Display image and welcome message
 
