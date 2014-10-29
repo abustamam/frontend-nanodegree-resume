@@ -66,7 +66,7 @@ var education = {
     {
       "name": "UC Davis",
       "location": "Davis, CA",
-      "degree": "N/A",
+      "degree": "",
       "majors": [
         "Chemical Engineering"
       ],
