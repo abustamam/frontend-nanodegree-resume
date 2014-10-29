@@ -195,9 +195,15 @@ bio.display = function() {
   var formattedEmail = HTMLemail.replace("%data%",contacts["email"]);
   var formattedGithub = HTMLgithub.replace("%data%",contacts["github"]);
   var formattedLocation = HTMLlocation.replace("%data%",contacts["location"]);
+  var cont = formattedMobile + formattedEmail + formattedGithub + formattedLocation;
+  $(cont).appendTo("#topContacts, #footerContacts");
+  // $("#topContacts").append(formattedMobile + formattedEmail + formattedGithub + formattedLocation);
+  // $("#footerContacts").append(formattedMobile + formattedEmail + formattedGithub + formattedLocation);
+  
+  // Display image and welcome message
+
   var formattedImage = HTMLbioPic.replace("%data%",bio["img"]);
   var formattedMessage = HTMLWelcomeMsg.replace("%data%",bio["welcomeMessage"]);
-  $("#topContacts").append(formattedMobile + formattedEmail + formattedGithub + formattedLocation);
   $("#header").append(formattedImage + formattedMessage);
 
   // Display skills
