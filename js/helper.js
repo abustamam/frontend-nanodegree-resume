@@ -50,10 +50,10 @@ var HTMLschoolLocation = "<div class='location-text'>%data%</div>";
 var HTMLschoolMajor = "<em><br>Major: %data%</em>"
 
 var HTMLonlineClasses = "<h3>Online Classes</h3>";
-var HTMLonlineTitle = "<a href='#'>%data%";
+var HTMLonlineURL = "<br><a href='%data%'>";
+var HTMLonlineTitle = "%data%";
 var HTMLonlineSchool = " - %data%</a>";
 var HTMLonlineDates = "<div class='date-text'>%data%</div>";
-var HTMLonlineURL = "<br><a href='#'>%data%</a>";
 
 var internationalizeButton = "<button>Internationalize</button>";
 var googleMap = "<div id='map'></div>";
@@ -105,7 +105,7 @@ Start here! initializeMap() is called when page is loaded.
 */
 function initializeMap() {
 
-  var locations;        
+  var locations = [];        
 
   var mapOptions = {
     disableDefaultUI: true
@@ -123,24 +123,25 @@ function initializeMap() {
   function locationFinder() {
     
     // initializes an empty array
-    var locations = [];
+
+    var locs = []
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
+    locs.push(bio.contacts.location);
     
     // iterates through school locations and appends each location to
     // the locations array
     for (var school in education.schools) {
-      locations.push(education.schools[school].location);
+      locs.push(education.schools[school].location);
     }
 
     // iterates through work locations and appends each location to
     // the locations array
     for (var job in work.jobs) {
-      locations.push(work.jobs[job].location);
+      locs.push(work.jobs[job].location);
     }
 
-    return locations;
+    return locs;
   }
 
   /*
@@ -242,5 +243,5 @@ window.addEventListener('load', initializeMap);
 //and adjust map bounds
 window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
- map.fitBounds(mapBounds);
+  map.fitBounds(mapBounds);
 });
