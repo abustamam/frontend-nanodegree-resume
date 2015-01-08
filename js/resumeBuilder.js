@@ -23,21 +23,24 @@ var projects = {
   "projects": [
     {
       "title": "HTML Mockup",
+      "url": "abustamam.github.io/Udacity-Portfolio",
       "dates": "October 2014",
-      "description": "Using HTML to create the mockup for a website",
-      "images": ["./images/fall006.jpg"]
+      "description": "Using a given mockup for design guidelines, this project focused on creating a website from scratch using HTML and CSS.",
+      "images": ["./images/p1.png"]
     },
     {
       "title": "JavaScript Resume",
+      "url": "abustamam.github.io/frontend-nanodegree-resume",
       "dates": "October 2014",
-      "description": "Using JavaScript to create an interactive resume",
-      "images": ["./images/fall008.jpg"]
+      "description": "This site was created using a basic template, and using JSON to populate each item.",
+      "images": ["./images/resume.png"]
     },
     {
-      "title": "Video Game Remake",
-      "dates": "October 2014",
-      "description": "Remake a classic game!",
-      "images": ["./images/fall012.jpg"]
+      "title": "Bugger (Frogger clone)",
+      "url": "abustamam.github.io/frontend-nanodegree-arcade-game",
+      "dates": "December 2014",
+      "description": "Remake the classic Frogger game using HTML Canvas and JavaScript.",
+      "images": ["./images/bugger.png"]
     }
   ]
 }
@@ -55,7 +58,7 @@ var bio = {
     "mobile": "916-623-5146",
     "email": "rasheed.bustamam@gmail.com",
     "github": "abustamam",
-    "location": "Sacramento, CA"
+    "location": "Elk Grove, CA"
   },
   "img": "images/me.jpg",
   "skills": ["public speaking", "programming", "teaching", "JavaScript"]
@@ -199,11 +202,11 @@ education.display = function() {
     for (course in education["onlineCourses"]){
       $("#education").append(HTMLschoolStart);
       var mooc = education["onlineCourses"][course];
+      var formattedUrl = HTMLonlineURL.replace("%data%", mooc["url"]);
       var formattedTitle = HTMLonlineTitle.replace("%data%", mooc["title"]);
       var formattedSchool = HTMLonlineSchool.replace("%data%", mooc["school"]);
       var formattedDates = HTMLonlineDates.replace("%data%", mooc["dates"]);
-      var formattedUrl = HTMLonlineURL.replace("%data%", mooc["url"]);
-      $(".education-entry:last").append(formattedTitle + formattedSchool + formattedDates + formattedUrl);
+      $(".education-entry:last").append(formattedUrl + formattedTitle + formattedSchool + formattedDates);
     };
   };
 };
@@ -237,11 +240,3 @@ var inName = function() {
 // Add map!
 
 $("#mapDiv").append(googleMap);
-
-
-
-
-
-
-
-

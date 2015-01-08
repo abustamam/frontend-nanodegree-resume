@@ -19,6 +19,10 @@ h1 {
   /*display: inline;*/
 }
 
+#name {
+  color: #FFFFFF;
+}
+
 h1 
 small {
   color: #0790FA;
@@ -85,7 +89,7 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #1564A1;
   text-decoration: none;
   margin-top: 10px;
   display: block;
