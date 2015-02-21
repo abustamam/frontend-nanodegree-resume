@@ -15,6 +15,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <head>
+  <meta charset="utf-8"> 
   <!-- Use bootstrap! -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -102,44 +103,5 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   course.
   -->
 
-  <script type="text/javascript">
-  // Notice how all of a sudden there's JavaScript inside this HTML
-  // document? You can write JavaScript between <script> tags. At the end of your 
-  // JavaScript, don't forget the closing script tag with the slash (/).
-
-
-  // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
-  //   two slashes for all following characters on a single line, or
-
-  /*
-      an opening and closing set of slash asterisks for block comments.
-  */
-
-
-  if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("topContacts").style.backgroundColor= "black";
-  }
-  if(document.getElementsByTagName("h1").length === 0) {
-    document.getElementById("header").style.backgroundColor= "black";
-  }
-  if(document.getElementsByClassName("work-entry").length === 0) {
-    document.getElementById("workExperience").style.backgroundColor= "black";
-  }
-  if(document.getElementsByClassName("project-entry").length === 0) {
-    document.getElementById("projects").style.backgroundColor= "black";
-  }
-  if(document.getElementsByClassName("education-entry").length === 0) {
-    document.getElementById("education").style.backgroundColor= "black";
-  }
-  // if(document.getElementsByClassName("skills-entry").length === 0) {
-  //   document.getElementById("skillsChart").style.backgroundColor= "black";
-  // }
-  if(document.getElementsByClassName("flex-item").length === 0) {
-    document.getElementById("letsConnect").style.backgroundColor= "black";
-  }
-  if(document.getElementById("map") == undefined) {
-    document.getElementById("mapDiv").style.backgroundColor= "black";
-  }
-  </script>
+  <script src="js/style.js"></script>
 </body>
