@@ -26,24 +26,31 @@ $(function(){
         "projects": [
           {
             "title": "HTML Mockup",
-            "url": "abustamam.github.io/Udacity-Portfolio",
+            "url": "abustamam.github.io/rb-port",
             "dates": "October 2014",
             "description": "Using a given mockup for design guidelines, this project focused on creating a website from scratch using HTML and CSS.",
             "images": ["./images/p1.png"]
           },
           {
             "title": "JavaScript Resume",
-            "url": "abustamam.github.io/frontend-nanodegree-resume",
-            "dates": "October 2014",
+            "url": "abustamam.github.io/resume",
+            "dates": "November 2014",
             "description": "This site was created using a basic template, and using JSON to populate each item.",
             "images": ["./images/resume.png"]
           },
           {
             "title": "Bugger (Frogger clone)",
-            "url": "abustamam.github.io/frontend-nanodegree-arcade-game",
+            "url": "abustamam.github.io/bugger",
             "dates": "December 2014",
             "description": "Remake the classic Frogger game using HTML Canvas and JavaScript.",
             "images": ["./images/bugger.png"]
+          },
+          {
+            "title": "Mobile Optimization",
+            "url": "abustamam.github.io/mobile-portfolio",
+            "dates": "January 2015",
+            "description": "Optimize, with regard to pagespeed and FPS, a mobile portfolio",
+            "images": ["./images/perf.png", "./images/pizza.png"]
           }
         ]
       };
