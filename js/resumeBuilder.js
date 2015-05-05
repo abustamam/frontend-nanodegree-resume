@@ -143,6 +143,18 @@ $(function(){
             "school": "Udacity",
             "dates": "February 2015",
             "url": "https://www.udacity.com/course/ud884"
+          },
+          {
+            "title": "JavaScript Testing",
+            "school": "Udacity",
+            "dates": "March 2015",
+            "url": "https://www.udacity.com/course/ud549"
+          },
+          {
+            "title": "JavaScript Design Patterns",
+            "school": "Udacity",
+            "dates": "April 2015",
+            "url": "https://www.udacity.com/course/ud989"
           }
         ]
       };
