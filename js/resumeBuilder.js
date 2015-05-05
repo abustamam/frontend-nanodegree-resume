@@ -262,7 +262,7 @@ $(function(){
     },
 
     initializeMap: function() {
-      this.map;    // declares a global map variable
+      //octopus.map;    // declares a global map variable
       var locations = [];        
 
       var mapOptions = {
@@ -271,7 +271,7 @@ $(function(){
 
       // This next line makes `map` a new Google Map JavaScript Object and attaches it to
       // <div id="map">, which is appended as part of an exercise late in the course.
-      this.map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+      octopus.map = new google.maps.Map(document.querySelector('#mapDiv'), mapOptions);
 
 
       /*
@@ -298,7 +298,6 @@ $(function(){
         for (var job in model.work.jobs) {
           locs.push(model.work.jobs[job].location);
         }
-
         return locs;
       }
 
@@ -317,7 +316,7 @@ $(function(){
 
         // marker is an object with additional data about the pin for a single location
         var marker = new google.maps.Marker({
-          map: this.map,
+          map: octopus.map,
           position: placeData.geometry.location,
           title: name
         });
@@ -331,7 +330,7 @@ $(function(){
 
         // hmmmm, I wonder what this is about...
         google.maps.event.addListener(marker, 'click', function() {
-          infoWindow.open(this.map,marker);
+          infoWindow.open(octopus.map, marker);
 
         });
 
@@ -339,9 +338,9 @@ $(function(){
         // bounds.extend() takes in a map location object
         bounds.extend(new google.maps.LatLng(lat, lon));
         // fit the map to the new marker
-        this.map.fitBounds(bounds);
+        octopus.map.fitBounds(bounds);
         // center the map
-        this.map.setCenter(bounds.getCenter());
+        octopus.map.setCenter(bounds.getCenter());
       }
 
       /*
@@ -362,11 +361,10 @@ $(function(){
 
         // creates a Google place search service object. PlacesService does the work of
         // actually searching for location data.
-        var service = new google.maps.places.PlacesService(map);
+        var service = new google.maps.places.PlacesService(octopus.map);
         
         // Iterates through the array of locations, creates a search object for each location
         for (place in locations) {
-
           // the search request object
           var request = {
             query: locations[place]
@@ -397,11 +395,11 @@ $(function(){
       octopus.workDisplay();
       octopus.projectsDisplay();
       octopus.educationDisplay();
-      this.addMap();
+      //this.addMap();
     },
 
     addMap: function() {
-      window.addEventListener('load', octopus.initializeMap);
+      window.addEventListener('load', octopus.initializeMap());
 
       window.addEventListener('resize', function(e) {
         octopus.map.fitBounds(mapBounds);
@@ -431,4 +429,4 @@ var inName = function() {
 
 // Add map!
 
-$("#mapDiv").append(googleMap);
+//$("#map").append(googleMap);
