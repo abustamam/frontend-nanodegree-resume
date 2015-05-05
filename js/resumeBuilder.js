@@ -85,7 +85,7 @@ $(function(){
           "location": "Elk Grove, CA"
         },
         "img": "images/me.jpg",
-        "skills": ["public speaking", "programming", "teaching", "JavaScript"]
+        "skills": ["public speaking", "programming", "teaching", "JavaScript", "HTML5", "CSS3"]
       };
 
       this.education = {
